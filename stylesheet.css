@@ -1,0 +1,93 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pinkish: #f9f0ff;
+  --grayish-purple: #8c6991;
+  --darkish-purple: #2f1533;
+  --hover-color: #b237ea;
+}
+
+body {
+  background-color: var(--pinkish);
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 600px;
+  /* CHANGE HEIGHT TO ADJUST WHOLE CONTAINER */
+  min-height: 400px;
+  padding: 02.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 10rem;
+}
+
+.container-header,
+.accordion-header {
+  color: var(--darkish-purple);
+}
+
+.container-header {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion-header {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  color: var(--hover-color);
+}
+
+.accordion {
+  padding: 1.75rem 0;
+}
+
+.accordion:last-child {
+  padding-bottom: 0;
+}
+
+.accordion:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.accordion-header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.answers {
+  color: var(--grayish-purple);
+  font-weight: 400;
+  margin-top: 1rem;
+  display: none;
+}
+
+.accordion.active .answers {
+  display: block;
+}
+
+.minus {
+  display: none;
+}
